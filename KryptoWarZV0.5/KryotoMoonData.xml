@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--Das erste Tag ist das Root Tag d.h. einzigartig und umschliechßt die ganze daten Struktur, ROOT = WURZEL-->
+
+<KryptoMoons>
+	<KryptoMoon>
+		<Name>TestMoon</Name>
+		<LP>10</LP>
+		<Attacke1>PowerBuyPunch</Attacke1>
+		<attacke1Schaden>4</attacke1Schaden>
+		<Attacke2>TestBuy</Attacke2>
+		<attacke2Schaden>2</attacke2Schaden>
+	</KryptoMoon>
+	<KryptoMoon>
+		<Name>KryptoKnospe</Name>
+		<LP>15</LP>
+		<Attacke1>PanicBuy</Attacke1>
+		<attacke1Schaden>3</attacke1Schaden>
+		<Attacke2>ChilledBuy</Attacke2>
+		<attacke2Schaden>1</attacke2Schaden>
+	</KryptoMoon>
+	<KryptoMoon>
+		<Name>MinningMoon</Name>
+		<LP>6</LP>
+		<Attacke1>Kommt noch</Attacke1>
+		<attacke1Schaden>2</attacke1Schaden>
+		<Attacke2>comming soon</Attacke2>
+		<attacke2Schaden>2</attacke2Schaden>
+	</KryptoMoon>
+</KryptoMoons>
+
+<!--XML Kommentar strg + #-->
