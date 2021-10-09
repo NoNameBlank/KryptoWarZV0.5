@@ -158,13 +158,25 @@ namespace KryptoWarZV0._5
             #endregion Zweiter Trainer sucht sich das Moon aus
 
             #region Kampf Aufruf
+            char ja;
+            do
+            {
+                
+                Kampf(t1, t2);
 
-            Kampf(t1, t2);
+                Console.WriteLine("Möchtet ihr noch einmal mit den gleichen Moons Kämpfen? Drücke j für ja zum beenden n drücken");
+                ja = Convert.ToChar(Console.ReadLine());
 
-            Console.WriteLine("Möchtet ihr noch einmal Kämpfen?");
-
+            }
+            while (ja == 'j');
             #endregion Kampf Aufruf
 
+            #region Trainer Fragen ob er mit neuen KryptoMoons kämpfen möchte
+            
+            
+            
+            
+            #endregion
 
         }
 
@@ -297,7 +309,7 @@ namespace KryptoWarZV0._5
                             if (lebensPunkteMoonT2 > 0)
                             {
                                 Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.Attacke1Name);
-                                Console.WriteLine("{0},dein {1} hat noch {2}", t2.TrainerName, t2.KryptoMoon.KryptoMoonName, lebensPunkteMoonT2);
+                                Console.WriteLine("{0},dein {1} hat noch {2} Lebenspunkte", t2.TrainerName, t2.KryptoMoon.KryptoMoonName, lebensPunkteMoonT2);
                                 t1.StartTrainer = false;
                                 t2.StartTrainer = true;
                             }
@@ -312,7 +324,7 @@ namespace KryptoWarZV0._5
                             if (lebensPunkteMoonT2 > 0)
                             {
                                 Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.Attacke1Name);
-                                Console.WriteLine("{0},dein {1} hat noch {2}", t2.TrainerName, t2.KryptoMoon.KryptoMoonName, lebensPunkteMoonT2);
+                                Console.WriteLine("{0},dein {1} hat noch {2} Lebenspunkte", t2.TrainerName, t2.KryptoMoon.KryptoMoonName, lebensPunkteMoonT2);
                                 t1.StartTrainer = false;
                                 t2.StartTrainer = true;
                             }
@@ -338,7 +350,7 @@ namespace KryptoWarZV0._5
                             if (lebensPunkteMoonT2 > 0)
                             {
                                 Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.Attacke1Name);
-                                Console.WriteLine("{0},dein {1} hat noch {2}", t1.TrainerName, t1.KryptoMoon.KryptoMoonName, lebensPunkteMoonT1);
+                                Console.WriteLine("{0},dein {1} hat noch {2} Lebenspunkte", t1.TrainerName, t1.KryptoMoon.KryptoMoonName, lebensPunkteMoonT1);
                                 t2.StartTrainer = false;
                                 t1.StartTrainer = true;
                             }
@@ -354,7 +366,7 @@ namespace KryptoWarZV0._5
                             if (lebensPunkteMoonT2 > 0)
                             {
                                 Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.Attacke1Name);
-                                Console.WriteLine("{0},dein {1} hat noch {2}", t1.TrainerName, t1.KryptoMoon.KryptoMoonName, lebensPunkteMoonT1);
+                                Console.WriteLine("{0},dein {1} hat noch {2} Lebenspunkte", t1.TrainerName, t1.KryptoMoon.KryptoMoonName, lebensPunkteMoonT1);
                                 t2.StartTrainer = false;
                                 t1.StartTrainer = true;
                             }
