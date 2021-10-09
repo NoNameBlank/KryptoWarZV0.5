@@ -161,7 +161,11 @@ namespace KryptoWarZV0._5
 
             Kampf(t1, t2);
 
+            Console.WriteLine("Möchtet ihr noch einmal Kämpfen?");
+
             #endregion Kampf Aufruf
+
+
         }
 
         #region Random Funktion  2 Zahlen
@@ -271,7 +275,7 @@ namespace KryptoWarZV0._5
 
             #endregion Welcher Trainer fängt an Anzugreifen
 
-            #region Trainer 1 Fängt an
+            #region Trainer  Fängt an
 
             int attackenauswahl;
 
@@ -292,7 +296,7 @@ namespace KryptoWarZV0._5
                             lebensPunkteMoonT2 = lebensPunkteMoonT2 - angriffEinsT1;
                             if (lebensPunkteMoonT2 > 0)
                             {
-                                Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.KryptoMoonName);
+                                Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.Attacke1Name);
                                 Console.WriteLine("{0},dein {1} hat noch {2}", t2.TrainerName, t2.KryptoMoon.KryptoMoonName, lebensPunkteMoonT2);
                                 t1.StartTrainer = false;
                                 t2.StartTrainer = true;
@@ -307,7 +311,7 @@ namespace KryptoWarZV0._5
                             lebensPunkteMoonT2 = lebensPunkteMoonT2 - angriffZweiT1;
                             if (lebensPunkteMoonT2 > 0)
                             {
-                                Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.KryptoMoonName);
+                                Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.Attacke1Name);
                                 Console.WriteLine("{0},dein {1} hat noch {2}", t2.TrainerName, t2.KryptoMoon.KryptoMoonName, lebensPunkteMoonT2);
                                 t1.StartTrainer = false;
                                 t2.StartTrainer = true;
@@ -333,7 +337,7 @@ namespace KryptoWarZV0._5
                             lebensPunkteMoonT1 = lebensPunkteMoonT1 - angriffEinsT2;
                             if (lebensPunkteMoonT2 > 0)
                             {
-                                Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.KryptoMoonName);
+                                Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.Attacke1Name);
                                 Console.WriteLine("{0},dein {1} hat noch {2}", t1.TrainerName, t1.KryptoMoon.KryptoMoonName, lebensPunkteMoonT1);
                                 t2.StartTrainer = false;
                                 t1.StartTrainer = true;
@@ -349,7 +353,7 @@ namespace KryptoWarZV0._5
                             lebensPunkteMoonT2 = lebensPunkteMoonT2 - angriffZweiT1;
                             if (lebensPunkteMoonT2 > 0)
                             {
-                                Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.KryptoMoonName);
+                                Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.Attacke1Name);
                                 Console.WriteLine("{0},dein {1} hat noch {2}", t1.TrainerName, t1.KryptoMoon.KryptoMoonName, lebensPunkteMoonT1);
                                 t2.StartTrainer = false;
                                 t1.StartTrainer = true;
@@ -369,9 +373,12 @@ namespace KryptoWarZV0._5
             while (lebensPunkteMoonT1 >= 0 && lebensPunkteMoonT2 >= 0);
                 #endregion Trainer 1 Fängt an
 
-                Console.WriteLine("Sososo ENDE");
+                Console.WriteLine("Kampf beendet.");
+
         }
 
         #endregion Kampf Funktion
+
+
     }
 }
