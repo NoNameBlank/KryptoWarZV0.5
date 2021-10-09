@@ -28,156 +28,156 @@ namespace KryptoWarZV0._5
 
             t2 = new Trainer(trainerNameEingabe);
 
-            Console.WriteLine("\n Es treten an {0} vs {1} ", t1.TrainerName, t2.TrainerName);
-
-            #endregion Willkommen bla bla Namen werden Trainer zugewiesen
-
-            #region Random Aufruf (welcher Trainer sucht sich als erster das KryptoMoon aus)
-
-            Console.WriteLine("\n *beeep* ZufallsGenerator wird hochgefahren *beep* ");
-            //aufrufr
-            int userStart = TrainerStart();
-            if (userStart == 1)
-            {
-                t1.StartTrainer = true;
-                Console.WriteLine("OhOhOh {0} du darfst mit der Auswahl beginnen, entscheide Weise!", t1.TrainerName);
-            }
-            else
-            {
-                t2.StartTrainer = true;
-                Console.WriteLine("OhOhOh {0} du darfst mit der Auswahl beginnen, entscheide Weise!", t2.TrainerName);
-            }
-
-            #endregion Random Aufruf (welcher Trainer sucht sich als erster das KryptoMoon aus)
-
-            #region KrytoMoonListeAufrufTrainer
-
-            List<KryptoMoon> kryptoMoonListe = erstelleKryptoMoonListe();
-
-            Console.WriteLine("************ ************ KRYPTOMOON AUSWAHL ************ ***********");
-
-            foreach (KryptoMoon kryptoMoon in kryptoMoonListe)
-            {
-                //Das WriteLine(); ist nur für eine LeerZeile da.
-                Console.WriteLine();
-                Console.WriteLine(kryptoMoon.KryptoMoonName);
-                Console.WriteLine("Lebenspunkte: {0}", kryptoMoon.KryptoMoonLebensPunkte);
-                Console.WriteLine("Attacke 1: {0} mit einem Schaden von: {1} Schadenspunkten", kryptoMoon.Attacke1Name, kryptoMoon.Attacke1Schaden);
-            }
-
-            #endregion KrytoMoonListeAufrufTrainer
-
-            #region Trainer der Anfängt sucht sich als erster das Moon aus
-
-            if (t1.StartTrainer == true)
-            {
-                int trainerAuswahl;
-                bool trainerAuswahlCheck;
-
-                Console.WriteLine("Na {0}, für welches KryptoMoon hast du dich entschieden?", t1.TrainerName);
-                trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
-
-                while (!trainerAuswahlCheck || trainerAuswahl > kryptoMoonListe.Count)
-
-                {
-                    Console.WriteLine("Falsche Eingabe ERROOOOOR");
-                    Console.WriteLine();
-                    Console.WriteLine("Versuchen Sie es doche einfach erneut");
-                    trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
-                }
-                // Auswahl - 1 da Index ab 0 beginnt (Informatik VS User)
-                t1.KryptoMoon = kryptoMoonListe[trainerAuswahl - 1];
-                Console.WriteLine("{0}, Du hast dich also für {1} entschieden. Viel Erfolg!", t1.TrainerName, t1.KryptoMoon.KryptoMoonName);
-            }
-            else
-            {
-                int trainerAuswahl;
-                bool trainerAuswahlCheck;
-
-                Console.WriteLine("Na {0}, für welches KryptoMoon hast du dich entschieden?", t1.TrainerName);
-                trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
-
-                while (!trainerAuswahlCheck || trainerAuswahl > kryptoMoonListe.Count)
-
-                {
-                    Console.WriteLine("Falsche Eingabe ERROOOOOR");
-                    Console.WriteLine();
-                    Console.WriteLine("Versuchen Sie es doche einfach erneut");
-                    trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
-                }
-                // Auswahl - 1 da Index ab 0 beginnt (Informatik VS User)
-                t2.KryptoMoon = kryptoMoonListe[trainerAuswahl - 1];
-                Console.WriteLine("{0}, Du hast dich also für {1} entschieden. Viel Erfolg!", t2.TrainerName, t2.KryptoMoon.KryptoMoonName);
-            }
-
-            #endregion Trainer der Anfängt sucht sich als erster das Moon aus
-
-            #region Zweiter Trainer sucht sich das Moon aus
-
-            if (t1.StartTrainer != true)
-            {
-                int trainerAuswahl;
-                bool trainerAuswahlCheck;
-
-                Console.WriteLine("Na {0}, für welches KryptoMoon hast du dich entschieden?", t1.TrainerName);
-                trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
-
-                while (!trainerAuswahlCheck || trainerAuswahl > kryptoMoonListe.Count)
-
-                {
-                    Console.WriteLine("Falsche Eingabe ERROOOOOR");
-                    Console.WriteLine();
-                    Console.WriteLine("Versuchen Sie es doche einfach erneut");
-                    trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
-                }
-                // Auswahl - 1 da Index ab 0 beginnt (Informatik VS User)
-                t1.KryptoMoon = kryptoMoonListe[trainerAuswahl - 1];
-                Console.WriteLine("{0}, Du hast dich also für {1} entschieden. Viel Erfolg!", t1.TrainerName, t1.KryptoMoon.KryptoMoonName);
-            }
-            else
-            {
-                int trainerAuswahl;
-                bool trainerAuswahlCheck;
-
-                Console.WriteLine("Na {0}, für welches KryptoMoon hast du dich entschieden?", t2.TrainerName);
-                trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
-
-                while (!trainerAuswahlCheck || trainerAuswahl > kryptoMoonListe.Count)
-
-                {
-                    Console.WriteLine("Falsche Eingabe ERROOOOOR");
-                    Console.WriteLine();
-                    Console.WriteLine("Versuchen Sie es doche einfach erneut");
-                    trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
-                }
-                // Auswahl - 1 da Index ab 0 beginnt (Informatik VS User)
-                t2.KryptoMoon = kryptoMoonListe[trainerAuswahl - 1];
-                Console.WriteLine("{0}, Du hast dich also für {1} entschieden. Viel Erfolg!", t2.TrainerName, t2.KryptoMoon.KryptoMoonName);
-            }
-
-            #endregion Zweiter Trainer sucht sich das Moon aus
-
-            #region Kampf Aufruf
-            char ja;
+            //Schleife für Abfrage nach ernuter KryptoMoon Auswahl 
+            char jaNeuauswahl;
             do
             {
-                
-                Kampf(t1, t2);
+                Console.WriteLine("\n Es treten an {0} vs {1} ", t1.TrainerName, t2.TrainerName);
 
-                Console.WriteLine("Möchtet ihr noch einmal mit den gleichen Moons Kämpfen? Drücke j für ja zum beenden n drücken");
-                ja = Convert.ToChar(Console.ReadLine());
+                #endregion Willkommen bla bla Namen werden Trainer zugewiesen
 
-            }
-            while (ja == 'j');
+                #region Random Aufruf (welcher Trainer sucht sich als erster das KryptoMoon aus)
+
+                Console.WriteLine("\n *beeep* ZufallsGenerator wird hochgefahren *beep* ");
+                //aufrufr
+                int userStart = TrainerStart();
+                if (userStart == 1)
+                {
+                    t1.StartTrainer = true;
+                    Console.WriteLine("OhOhOh {0} du darfst mit der Auswahl beginnen, entscheide Weise!", t1.TrainerName);
+                }
+                else
+                {
+                    t2.StartTrainer = true;
+                    Console.WriteLine("OhOhOh {0} du darfst mit der Auswahl beginnen, entscheide Weise!", t2.TrainerName);
+                }
+
+                #endregion Random Aufruf (welcher Trainer sucht sich als erster das KryptoMoon aus)
+
+                #region KrytoMoonListeAufrufTrainer
+
+                List<KryptoMoon> kryptoMoonListe = erstelleKryptoMoonListe();
+
+                Console.WriteLine("************ ************ KRYPTOMOON AUSWAHL ************ ***********");
+
+                foreach (KryptoMoon kryptoMoon in kryptoMoonListe)
+                {
+                    //Das WriteLine(); ist nur für eine LeerZeile da.
+                    Console.WriteLine();
+                    Console.WriteLine(kryptoMoon.KryptoMoonName);
+                    Console.WriteLine("Lebenspunkte: {0}", kryptoMoon.KryptoMoonLebensPunkte);
+                    Console.WriteLine("Attacke 1: {0} mit einem Schaden von: {1} Schadenspunkten", kryptoMoon.Attacke1Name, kryptoMoon.Attacke1Schaden);
+                }
+
+                #endregion KrytoMoonListeAufrufTrainer
+
+                #region Trainer der Anfängt sucht sich als erster das Moon aus
+
+                if (t1.StartTrainer == true)
+                {
+                    int trainerAuswahl;
+                    bool trainerAuswahlCheck;
+
+                    Console.WriteLine("Na {0}, für welches KryptoMoon hast du dich entschieden?", t1.TrainerName);
+                    trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
+
+                    while (!trainerAuswahlCheck || trainerAuswahl > kryptoMoonListe.Count)
+
+                    {
+                        Console.WriteLine("Falsche Eingabe ERROOOOOR");
+                        Console.WriteLine();
+                        Console.WriteLine("Versuchen Sie es doche einfach erneut");
+                        trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
+                    }
+                    // Auswahl - 1 da Index ab 0 beginnt (Informatik VS User)
+                    t1.KryptoMoon = kryptoMoonListe[trainerAuswahl - 1];
+                    Console.WriteLine("{0}, Du hast dich also für {1} entschieden. Viel Erfolg!", t1.TrainerName, t1.KryptoMoon.KryptoMoonName);
+                }
+                else
+                {
+                    int trainerAuswahl;
+                    bool trainerAuswahlCheck;
+
+                    Console.WriteLine("Na {0}, für welches KryptoMoon hast du dich entschieden?", t1.TrainerName);
+                    trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
+
+                    while (!trainerAuswahlCheck || trainerAuswahl > kryptoMoonListe.Count)
+
+                    {
+                        Console.WriteLine("Falsche Eingabe ERROOOOOR");
+                        Console.WriteLine();
+                        Console.WriteLine("Versuchen Sie es doche einfach erneut");
+                        trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
+                    }
+                    // Auswahl - 1 da Index ab 0 beginnt (Informatik VS User)
+                    t2.KryptoMoon = kryptoMoonListe[trainerAuswahl - 1];
+                    Console.WriteLine("{0}, Du hast dich also für {1} entschieden. Viel Erfolg!", t2.TrainerName, t2.KryptoMoon.KryptoMoonName);
+                }
+
+                #endregion Trainer der Anfängt sucht sich als erster das Moon aus
+
+                #region Zweiter Trainer sucht sich das Moon aus
+
+                if (t1.StartTrainer != true)
+                {
+                    int trainerAuswahl;
+                    bool trainerAuswahlCheck;
+
+                    Console.WriteLine("Na {0}, für welches KryptoMoon hast du dich entschieden?", t1.TrainerName);
+                    trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
+
+                    while (!trainerAuswahlCheck || trainerAuswahl > kryptoMoonListe.Count)
+
+                    {
+                        Console.WriteLine("Falsche Eingabe ERROOOOOR");
+                        Console.WriteLine();
+                        Console.WriteLine("Versuchen Sie es doche einfach erneut");
+                        trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
+                    }
+                    // Auswahl - 1 da Index ab 0 beginnt (Informatik VS User)
+                    t1.KryptoMoon = kryptoMoonListe[trainerAuswahl - 1];
+                    Console.WriteLine("{0}, Du hast dich also für {1} entschieden. Viel Erfolg!", t1.TrainerName, t1.KryptoMoon.KryptoMoonName);
+                }
+                else
+                {
+                    int trainerAuswahl;
+                    bool trainerAuswahlCheck;
+
+                    Console.WriteLine("Na {0}, für welches KryptoMoon hast du dich entschieden?", t2.TrainerName);
+                    trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
+
+                    while (!trainerAuswahlCheck || trainerAuswahl > kryptoMoonListe.Count)
+
+                    {
+                        Console.WriteLine("Falsche Eingabe ERROOOOOR");
+                        Console.WriteLine();
+                        Console.WriteLine("Versuchen Sie es doche einfach erneut");
+                        trainerAuswahlCheck = Int32.TryParse(Console.ReadLine(), out trainerAuswahl);
+                    }
+                    // Auswahl - 1 da Index ab 0 beginnt (Informatik VS User)
+                    t2.KryptoMoon = kryptoMoonListe[trainerAuswahl - 1];
+                    Console.WriteLine("{0}, Du hast dich also für {1} entschieden. Viel Erfolg!", t2.TrainerName, t2.KryptoMoon.KryptoMoonName);
+                }
+
+                #endregion Zweiter Trainer sucht sich das Moon aus
+
+                #region Kampf Aufruf
+
+                char ja;
+                do
+                {
+                    Kampf(t1, t2);
+
+                    Console.WriteLine("Möchtet ihr noch einmal mit den gleichen Moons Kämpfen? Drücke j für ja, zum beenden n drücken");
+                    ja = Convert.ToChar(Console.ReadLine());
+                }
+                while (ja == 'j');
+                Console.WriteLine("Möchter ihr zur KryptoMoon Auswahl und erneut Kämpfen?  j für ja, zum beenden n drücken");
+                jaNeuauswahl = Convert.ToChar(Console.ReadLine());
+
+
+            } while (jaNeuauswahl == 'j');
             #endregion Kampf Aufruf
-
-            #region Trainer Fragen ob er mit neuen KryptoMoons kämpfen möchte
-            
-            
-            
-            
-            #endregion
-
         }
 
         #region Random Funktion  2 Zahlen
@@ -293,7 +293,7 @@ namespace KryptoWarZV0._5
 
             Console.WriteLine("*Kurz ein Bauen, wird Spannend*");
 
-           do
+            do
             {
                 if (t1.StartTrainer == true)
                 {
@@ -333,7 +333,6 @@ namespace KryptoWarZV0._5
                                 Console.WriteLine("{0} hat keine Lebenspunkte mehr Dr.Chain ist Unterwegs.", t2.KryptoMoon.KryptoMoonName);
                             }
                             break;
-                            
                     }
                 }
                 else if (t2.StartTrainer == true && t1.KryptoMoon.KryptoMoonLebensPunkte > 0)
@@ -347,7 +346,7 @@ namespace KryptoWarZV0._5
                     {
                         case 1:
                             lebensPunkteMoonT1 = lebensPunkteMoonT1 - angriffEinsT2;
-                            if (lebensPunkteMoonT2 > 0)
+                            if (lebensPunkteMoonT1 > 0)
                             {
                                 Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.Attacke1Name);
                                 Console.WriteLine("{0},dein {1} hat noch {2} Lebenspunkte", t1.TrainerName, t1.KryptoMoon.KryptoMoonName, lebensPunkteMoonT1);
@@ -357,40 +356,33 @@ namespace KryptoWarZV0._5
                             else
                             {
                                 Console.WriteLine("{0} hat keine Lebenspunkte mehr  Dr.Chain ist Unterwegs.", t1.KryptoMoon.KryptoMoonName);
-                                
                             }
                             break;
 
                         case 2:
-                            lebensPunkteMoonT2 = lebensPunkteMoonT2 - angriffZweiT1;
-                            if (lebensPunkteMoonT2 > 0)
+                            lebensPunkteMoonT1 = lebensPunkteMoonT1 - angriffZweiT2;
+                            if (lebensPunkteMoonT1 > 0)
                             {
                                 Console.WriteLine("ATTACKE {0} Lädt sich auf BOOOOOOMMM BÄÄÄÄÄÄMMMMMMMMMM", t1.KryptoMoon.Attacke1Name);
                                 Console.WriteLine("{0},dein {1} hat noch {2} Lebenspunkte", t1.TrainerName, t1.KryptoMoon.KryptoMoonName, lebensPunkteMoonT1);
                                 t2.StartTrainer = false;
                                 t1.StartTrainer = true;
                             }
-                           
                             else
                             {
                                 Console.WriteLine("{0} hat keine Lebenspunkte mehr Dr.Chain ist Unterwegs.", t1.KryptoMoon.KryptoMoonName);
-                                
                             }
                             break;
-
-
                     }
                 }
             }
             while (lebensPunkteMoonT1 >= 0 && lebensPunkteMoonT2 >= 0);
-                #endregion Trainer 1 Fängt an
 
-                Console.WriteLine("Kampf beendet.");
+            #endregion Trainer  Fängt an
 
+            Console.WriteLine("Kampf beendet.");
         }
 
         #endregion Kampf Funktion
-
-
     }
 }
