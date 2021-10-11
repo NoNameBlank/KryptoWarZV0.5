@@ -9,7 +9,7 @@ namespace KryptoWarZV0._5
         private static void Main(string[] args)
         {
             Console.WriteLine("Erster Test mit Git Hub");
-            Console.WriteLine("Das hier geschriebene ist die Veränderung im COde");
+            Console.WriteLine("Das hier geschriebene ist die Veränderung im Code");
 
             #region Willkommen bla bla Namen werden Trainer zugewiesen
 
@@ -28,8 +28,10 @@ namespace KryptoWarZV0._5
 
             t2 = new Trainer(trainerNameEingabe);
 
-            //Schleife für Abfrage nach ernuter KryptoMoon Auswahl 
+            //Schleife für Abfrage nach ernuter KryptoMoon Auswahl
             char jaNeuauswahl;
+            int zählerKämpfe = 0;
+          
             do
             {
                 Console.WriteLine("\n Es treten an {0} vs {1} ", t1.TrainerName, t2.TrainerName);
@@ -167,17 +169,20 @@ namespace KryptoWarZV0._5
                 do
                 {
                     Kampf(t1, t2);
-
+                    zählerKämpfe ++;
                     Console.WriteLine("Möchtet ihr noch einmal mit den gleichen Moons Kämpfen? Drücke j für ja, zum beenden n drücken");
                     ja = Convert.ToChar(Console.ReadLine());
                 }
-                while (ja == 'j');
+                 while (ja == 'j');
+              
                 Console.WriteLine("Möchter ihr zur KryptoMoon Auswahl und erneut Kämpfen?  j für ja, zum beenden n drücken");
                 jaNeuauswahl = Convert.ToChar(Console.ReadLine());
-
-
+                 
             } while (jaNeuauswahl == 'j');
+
             #endregion Kampf Aufruf
+
+            Console.WriteLine("Anzahl der Kämpfe: " + zählerKämpfe);
         }
 
         #region Random Funktion  2 Zahlen
@@ -316,6 +321,7 @@ namespace KryptoWarZV0._5
                             else
                             {
                                 Console.WriteLine("{0} hat keine Lebenspunkte mehr  Dr.Chain ist Unterwegs.", t2.KryptoMoon.KryptoMoonName);
+                                Console.WriteLine("Herzlichen Glückwunsch {0} und {1} habt Gewonnen!", t2.TrainerName, t2.KryptoMoon.KryptoMoonName);
                             }
                             break;
 
@@ -331,6 +337,7 @@ namespace KryptoWarZV0._5
                             else
                             {
                                 Console.WriteLine("{0} hat keine Lebenspunkte mehr Dr.Chain ist Unterwegs.", t2.KryptoMoon.KryptoMoonName);
+                                Console.WriteLine("Herzlichen Glückwunsch {0} und {1} habt Gewonnen!", t2.TrainerName, t2.KryptoMoon.KryptoMoonName);
                             }
                             break;
                     }
@@ -356,6 +363,7 @@ namespace KryptoWarZV0._5
                             else
                             {
                                 Console.WriteLine("{0} hat keine Lebenspunkte mehr  Dr.Chain ist Unterwegs.", t1.KryptoMoon.KryptoMoonName);
+                                Console.WriteLine("Herzlichen Glückwunsch {0} und {1} habt Gewonnen!", t1.TrainerName, t1.KryptoMoon.KryptoMoonName);
                             }
                             break;
 
@@ -371,6 +379,7 @@ namespace KryptoWarZV0._5
                             else
                             {
                                 Console.WriteLine("{0} hat keine Lebenspunkte mehr Dr.Chain ist Unterwegs.", t1.KryptoMoon.KryptoMoonName);
+                                Console.WriteLine("Herzlichen Glückwunsch {0} und {1} habt Gewonnen!", t1.TrainerName, t1.KryptoMoon.KryptoMoonName);
                             }
                             break;
                     }
