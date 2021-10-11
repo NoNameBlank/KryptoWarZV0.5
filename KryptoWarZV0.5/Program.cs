@@ -218,7 +218,10 @@ namespace KryptoWarZV0._5
             //XML-DateiAuslesen umd sich liste.Add zu sparen
 
             XmlDocument doc = new XmlDocument();
-            doc.Load("C:/Users/CC-Student/source/repos/KryptoWarZV0.5/KryptoWarZV0.5/KryotoMoonData.xml");
+            // versuche ---> @ dreht  \  in / um.   ( \ so liest windows den pfad)     ( / so ließt VisualCode den Pfad)  wenn man kein @ vor macht muss man alles manuell umdrehen 
+            //doc.Load("C:/Users/CC-Student/source/repos/KryptoWarZV0.5/KryptoWarZV0.5/KryotoMoonData.xml");
+            
+            doc.Load(@"C:\Users\CC-Student\source\repos\KryptoWarZV0.5\KryptoWarZV0.5\KryotoMoonData.xml");
             // Wurzelelement root
             XmlElement root = doc.DocumentElement;
             XmlNodeList nodes = root.SelectNodes("KryptoMoon");
