@@ -13,6 +13,34 @@ namespace KryptoWarZV0._5
         {
             Console.WriteLine("Erster Test mit Git Hub");
             Console.WriteLine("Das hier geschriebene ist die Veränderung im Code");
+            #region Bild ASCII Test
+            Console.WriteLine(@"  .             .        .     .     |--|--|--|--|--|--|  |===|==|   /    i
+        .            ______________|__|__|__|__|__|_ |  |===|==|  *  . /=\
+__ *            .   /______________________________|-|  |===|==|       |=|  .
+__|  .      .   .  //______________________________| :----------------------.
+__|   /|\      _|_|//       ooooooooooooooooooooo  |-|                      |
+__|  |/|\|__   ||l|/,-------8                   8 -| |                      |
+__|._|/|\|||.l |[=|/,-------8                   8 -|-|   Willkommen         |
+__|[+|-|-||||li|[=|---------8                   8 -| |                      |
+_-----.|/| //:\_[=|\`-------8                   8 -|-|         Trainer      |
+ /|  /||//8/ :  8_|\`------ 8ooooooooooooooooooo8 -| |                      |
+/=| //||/ |  .  | |\\_____________  ____  _________|-|                      |
+==|//||  /   .   \ \\_____________ |X|  | _________| `---==------------==---'
+==| ||  /         \ \_____________ |X| \| _________|     ||            ||
+==| |~ /     .     \
+LS|/  /             \______________________________________________________");
+
+
+            // source https://www.asciiart.eu/buildings-and-places/cities 
+
+
+
+
+
+
+
+
+            #endregion
 
             #region Willkommen bla bla Namen werden Trainer zugewiesen
 
